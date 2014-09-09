@@ -1,0 +1,408 @@
+/*  
+Theme Name: Orange Subway
+Theme URI: http://www.wpdesigner.com
+Description: Orange Subway Wordpress theme created by Small Potato
+Version: 1.0.1
+Author: Small Potato
+Author URI: http://www.wpdesigner.com/
+
+	This theme is released under Creative Commons Attribution 2.5 License.
+
+*/
+
+body, h1, h2, h3, h4, h5, h6, address, blockquote, dd, dl, hr, p, form{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: Arial, Helvetica, Georgia, sans-serif;
+	font-size: 12px;
+	text-align: center;
+	vertical-align: top;
+	background: #e16501 url(images/bg_body.gif) repeat-x;
+	color: #4d1d11;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: Arial, Helvetica, Georgia, sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+a{
+	text-decoration: underline;
+	color: #c93c00;
+}
+
+a:hover{ text-decoration: none; }
+
+a img{ border: 0; }
+
+abbr, acronym{ border: 0; }
+
+address, dl, p{ padding: 15px 0 0; }
+
+blockquote{
+	margin: 15px 0 0;
+	background: #ffe9b2;
+}
+
+blockquote p{ padding: 15px; }
+
+blockquote blockquote{
+	margin: 15px;
+	background: #fff;
+}
+
+code{
+	background: #eee;
+}
+
+dt{ font-weight: bold; }
+
+dd{ padding: 0 0 0 15px; }
+
+hr{
+	clear: both;
+	margin: 15px 15px 5px 15px;
+	border: 0;
+	height: 1px;
+	text-align: left;
+	background: #f1cf8f;
+	color: #f1cf8f;
+}
+
+small{
+	font-size: 11px;
+}
+
+pre{
+	width: 90%;
+}
+
+input, textarea{
+	font-family: Arial, Helvetica, Georgia, sans-serif;
+	font-size: 12px;
+	padding: 2px;
+}
+
+input#s, input#author, input#email, input#url, textarea#comment{
+	border: 1px solid #f1cf8f;
+	background-color: #fff;
+	padding: 3px;
+}
+
+input#author, input#email, input#url{
+	margin: 0 5px 0 0;
+}
+
+
+#container{
+	margin: 0 auto;
+	width: 782px;
+	padding: 3px 0 15px;
+	text-align: left;
+	vertical-align: top;
+}
+
+#menu, #footer{
+	margin: 15px 0 0;
+	float: left;
+	width: 782px;
+	background: #4e1e11 url(images/bg_nav_slash_footer.gif);
+	color: #fff;
+	clear: both;
+}
+
+#menu a, #footer a{
+	color: #fff;
+}
+
+#menu ul{
+	margin: 0;
+	padding: 13px 0;
+	list-style: none;
+}
+
+
+#menu ul li{
+	display: inline;
+	padding: 0 0 0 15px;
+}
+
+#header{
+	float: left;
+	margin: 15px 0 0;
+	width: 782px;
+	height: 217px;
+	overflow: hidden;
+	background: #230a05 url(images/banner.jpg) no-repeat;
+	color: #fff;
+	clear: both;
+}
+
+#header h1{
+	padding: 45px 45px 0;
+	font-family: Georgia, sans-serif;
+	font-size: 36px;
+	font-weight: normal;
+	color: #fff;
+}
+
+#header h1 a{
+	text-decoration: none;
+	color: #fff;
+}
+
+#header h1 a:hover{
+	text-decoration: underline;
+}
+
+#header .description{
+	padding: 15px 45px 45px;
+	font-family: Arial, Helvetica, Georgia, sans-seriff;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 24px;
+	
+}
+
+#sidebar{
+	float: left;
+	width: 192px;
+	color: #4d1d11;
+}
+
+#sidebar a{
+	color: #fff;
+}
+
+#sidebar ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#sidebar ul li{
+	padding: 15px 0 0;
+}
+
+#sidebar ul li input{
+	margin: 2px 0 0;
+}
+
+#sidebar ul li h2{
+	padding: 13px  15px;
+	font-family: Arial, Helvetica, Georgia, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	background: url(images/bg_ul_li_h2.gif) no-repeat;
+}
+
+#sidebar ul ul {
+	padding: 10px 13px 15px;
+	background: #e16501 url(images/bg_ul_ul.jpg) no-repeat;
+}
+
+#sidebar ul ul li{
+	padding: 0;
+	line-height: 24px;
+}
+
+#sidebar ul ul ul{
+	padding: 0;
+	background: none;
+}
+
+#sidebar ul ul ul li{
+	padding: 0 0 0 15px;
+}
+
+#page{
+	float: left;
+	width: 575px;
+	text-align: left;
+	vertical-align: top;
+}
+
+#syndication{
+	display: inline;
+	float: left;
+	margin: 15px 0 0 15px;
+	width: 575px;
+	background: url(images/bg_syndication.gif) no-repeat;
+}
+
+#syndication a{
+	color: #4d1d11;
+}
+
+#syndication .feeds{
+	padding: 13px 15px 14px 37px;
+	font-family: Arial, Helvetica, Georgia, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	background: url(images/feed-icon.gif) no-repeat 15px 15px;
+}
+
+.maincol{
+	display: inline;
+	float: left;
+	margin: 0 0 0 15px;
+	padding: 0 0 15px;
+	width: 575px;
+	background: #f1cf8f url(images/bg_maincol.gif) no-repeat bottom left;
+}
+
+.post{
+	margin: 15px 15px 0;
+	background: #fff url(images/bg_post_top.gif) no-repeat;
+}
+
+.post h2{
+	margin: 13px 15px 0;
+	padding: 13px 0 10px;
+	border-bottom: 1px solid #f1cf8f;
+}
+
+.post h2 a{
+	color: #e16501;
+}
+
+.entry{
+	padding: 0 15px 15px;
+	line-height: 24px;
+	background: #fff url(images/bg_post_bottom.gif) no-repeat bottom left;
+}
+
+.entry h1, .entry h2, .entry h3, .entry h4, .entry h5, .entry h6{
+	border: 0;
+	padding: 15px 0 0;
+}
+
+.entry h1{
+	font-family: Georgia;
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.entry h2{
+	margin: 0;
+	font-size: 18px;
+}
+
+.entry h3{}
+
+.entry  h4{ font-size: 16px; }
+
+.entry h5{ font-size: 14px; }
+
+.entry h6{ font-size: 11px; font-weight: normal; }
+
+.entry img{
+	border: 1px solid #f1cf8f;
+	padding: 4px;
+	background-color: #fff;
+}
+
+.entry img.wp-smiley{
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+}
+
+.entry img.alignleft{
+	float: left;
+	margin: 5px 10px 0 0;
+}
+
+.entry img.alignright{
+	float: right;
+	margin: 5px 0 0 10px;
+}
+
+.browse{
+	padding: 15px 30px 0;
+}
+
+#footer{
+	margin: 15px 0 15px;
+}
+
+#footer p{
+	padding: 13px 15px;
+}
+
+/* comments template */
+
+.comments-template{
+	border-top: 1px solid #f1cf8f;
+	margin: 15px 0 0;
+	padding: 0;
+	line-height: 24px;
+	background: #fff;
+}
+
+.comments-template ol{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.comments-template ol li{
+	margin: 15px 0 0;
+	line-height: 24px;
+	padding: 0 0 15px;
+	border-bottom: 1px solid #f1cf8f;
+}
+
+.commentmetadata{
+	font-size: 11px;
+}
+
+/* end comments template */
+
+
+/* wp-calendar */
+
+table#wp-calendar{
+	width: 100%;
+	font-family: Arial, Helvetica, Georgia, sans-serif;
+	text-transform: none;
+}
+
+table#wp-calendar caption{
+	padding: 10px 15px;
+}
+
+table#wp-calendar th{
+	font-weight: normal;
+	text-align: center;
+	vertical-align: top;
+	background: #F87B15;
+}
+
+table#wp-calendar td{
+	padding: 1px;
+	text-align: right;
+}
+
+table#wp-calendar tfoot td{
+	text-align: center;
+}
+
+/* end calendar */
+
+/*  
+Links:
+
+http://www.seokontakt.ru/
+http://www.100-tovarov.ru/
+http://www.23-fevralya-podarki.ru/
+http://www.linzar.ru/
+http://www.minikvartira.ru/
+
+*/

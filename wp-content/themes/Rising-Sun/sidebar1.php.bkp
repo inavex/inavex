@@ -1,0 +1,122 @@
+<div class="sidebar1">      
+  <?php if (!art_sidebar(1)): ?>
+   <div class="Block">
+    <div class="Block-tl"></div>
+    <div class="Block-tr">
+      <div></div>
+    </div>
+    <div class="Block-bl">
+      <div></div>
+    </div>
+    <div class="Block-br">
+      <div></div>
+    </div>
+    <div class="Block-tc">
+      <div></div>
+    </div>
+    <div class="Block-bc">
+      <div></div>
+    </div>
+    <div class="Block-cl">
+      <div></div>
+    </div>
+    <div class="Block-cr">
+      <div></div>
+    </div>
+    <div class="Block-cc"></div>
+    <div class="Block-body">
+      <div class="BlockHeader">
+        <div class="header-tag-icon">
+          <div class="BlockHeader-text">
+            <?php _e('Поиск', 'kubrick'); ?>
+          </div>
+        </div>
+        <div class="l"></div>
+        <div class="r">
+          <div></div>
+        </div>
+      </div>
+      <div class="BlockContent">
+        <div class="BlockContent-body">
+          <form method="get" id="searchform" action="<?php bloginfo('url'); ?>/">
+            <input type="text" value="<?php the_search_query(); ?>" name="s" id="s" style="width: 95%;" />
+            <button class="Button" type="submit" name="search">
+              <span class="btn">
+               <span class="t">
+                 <?php _e('Search', 'kubrick'); ?>
+               </span>
+               <span class="r">
+                  <span></span>
+               </span>
+               <span class="l"></span>
+              </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+   </div>
+
+   <div class="Block">
+    <div class="Block-tl"></div>
+    <div class="Block-tr"><div></div></div>
+    <div class="Block-bl"><div></div></div>
+    <div class="Block-br"><div></div></div>
+    <div class="Block-tc"><div></div></div>
+    <div class="Block-bc"><div></div></div>
+    <div class="Block-cl"><div></div></div>
+    <div class="Block-cr"><div></div></div>
+    <div class="Block-cc"></div>
+    <div class="Block-body">
+      <div class="BlockHeader">
+        <div class="header-tag-icon">
+          <div class="BlockHeader-text">
+            <?php _e('Ссылки:', 'kubrick'); ?>
+          </div>
+        </div>
+        <div class="l"></div>
+        <div class="r"><div></div></div>
+      </div>
+      <div class="BlockContent">
+        <div class="BlockContent-body">
+          <ul>
+            <?php wp_list_bookmarks('title_li=&categorize=0'); ?>
+          </ul>
+        </div>
+      </div>
+    </div>
+   </div>
+
+   <div class="Block">
+    <div class="Block-tl"></div>
+    <div class="Block-tr"><div></div></div>
+    <div class="Block-bl"><div></div></div>
+    <div class="Block-br"><div></div></div>
+    <div class="Block-tc"><div></div></div>
+    <div class="Block-bc"><div></div></div>
+    <div class="Block-cl"><div></div></div>
+    <div class="Block-cr"><div></div></div>
+    <div class="Block-cc"></div>
+    <div class="Block-body">
+      <div class="BlockHeader">
+        <div class="header-tag-icon">
+          <div class="BlockHeader-text">
+            <?php _e('Мета:', 'kubrick'); ?>
+          </div>
+        </div>
+        <div class="l"></div>
+        <div class="r"><div></div></div>
+      </div>
+      <div class="BlockContent">
+        <div class="BlockContent-body">
+          <ul>
+	    <?php wp_register(); ?>
+	    <li><?php wp_loginout(); ?></li>
+            <?php wp_meta(); ?>
+	  </ul>
+        </div>
+      </div>
+    </div>
+   </div>
+  <?php endif ?>
+</div>

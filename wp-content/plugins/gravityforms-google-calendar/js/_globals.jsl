@@ -1,0 +1,4 @@
+var jQuery;
+var form;
+var fieldSettings;
+var gfgcal;

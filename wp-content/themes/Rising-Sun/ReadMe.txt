@@ -1,0 +1,1 @@
+Локализация шаблона - FreeWordpressThemes.ru

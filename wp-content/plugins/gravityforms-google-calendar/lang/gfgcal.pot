@@ -1,0 +1,190 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Gravity Forms Connect to Google Calendar™\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-14 15:32+0200\n"
+"PO-Revision-Date: 2013-01-14 15:33+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../gfgcal-settings-page.php:40
+msgid "The auth code provided is invalid. Please try again."
+msgstr ""
+
+#: ../gfgcal-settings-page.php:46
+msgid "Settings saved."
+msgstr ""
+
+#: ../gfgcal.php:87 ../views/form-properties-settings.php:3
+msgid "Google Calendar"
+msgstr ""
+
+#: ../gfgcal.php:199
+msgid ""
+"<h6>Google Calendar</h6> Google Calendar fields allow you to add fields to "
+"your form that enable creation of Google Calendar Events."
+msgstr ""
+
+#: ../gfgcal.php:200
+msgid "<h6>Google Calendar</h6> Select a calendar from the list"
+msgstr ""
+
+#: ../gfgcal.php:201
+msgid ""
+"<h6>Google Calendar Events Require Approval</h6> Check this if you want to "
+"manually approve submitted events."
+msgstr ""
+
+#: ../gfgcal.php:203
+msgid ""
+"<h6>Check Free/Busy</h6> Check if there are any overlapping events on "
+"submission and return a validation error if so."
+msgstr ""
+
+#: ../gfgcal.php:303
+msgid "The time interval you have selected is already taken."
+msgstr ""
+
+#: ../gfgcal.php:311
+msgid ""
+"Missing Start Date/Title Google Calendar fields. These two are mandatory for "
+"event submission to work correctly."
+msgstr ""
+
+#: ../gfgcal.php:312
+msgid ""
+"You can't use only one time field, you need to add both start and end time "
+"fields for enabling submission of exact time periods to your calendar."
+msgstr ""
+
+#: ../gfgcal.php:313
+msgid ""
+"To be able to add these fields you must first select a Google Calendar from "
+"Form Settings."
+msgstr ""
+
+#: ../gfgcal.php:324
+msgid "Event Title"
+msgstr ""
+
+#: ../gfgcal.php:331
+msgid "Start Date"
+msgstr ""
+
+#: ../gfgcal.php:339
+msgid "End Date"
+msgstr ""
+
+#: ../gfgcal.php:346
+msgid "Start Time"
+msgstr ""
+
+#: ../gfgcal.php:352
+msgid "End Time"
+msgstr ""
+
+#: ../gfgcal.php:358
+msgid "Location"
+msgstr ""
+
+#: ../gfgcal.php:366
+msgid "All Day Event"
+msgstr ""
+
+#: ../gfgcal.php:375
+msgid "Description"
+msgstr ""
+
+#: ../gfgcal.php:473
+msgid "ERROR: Couldn't submit event to Google Calendar."
+msgstr ""
+
+#: ../gfgcal.php:478
+msgid "ERROR: Selected event might have been deleted manually."
+msgstr ""
+
+#: ../gfgcal.php:711
+msgid "Ajax Error while setting lead property"
+msgstr ""
+
+#: ../gfgcal.php:746
+msgid "Event URL:"
+msgstr ""
+
+#: ../gfgcal.php:757
+msgid "Approve this event"
+msgstr ""
+
+#: ../gfgcal.php:757 ../gfgcal.php:767
+msgid "Approve"
+msgstr ""
+
+#: ../gfgcal.php:758
+msgid "Disapprove this event"
+msgstr ""
+
+#: ../gfgcal.php:758 ../gfgcal.php:769
+msgid "Disapprove"
+msgstr ""
+
+#: ../gfgcal.php:769
+msgid "All Checked Events"
+msgstr ""
+
+#: ../gfgcal.php:775
+msgid ""
+"<strong>Gravity Forms</strong> is missing or not active. To use "
+"<strong>Gravity Forms Google Calendar</strong> you must first install and/or "
+"activate Gravity Forms."
+msgstr ""
+
+#: ../gfgcal.php:794
+msgid "Google Calendar Title"
+msgstr ""
+
+#: ../gfgcal-client.php:72
+#, php-format
+msgid ""
+"You need to get an authentication code so <strong>Gravity Forms Google "
+"Calendar</strong> integration can work. Please visit the <a href=\"%s"
+"\">settings page</a> to get started."
+msgstr ""
+
+#: ../views/admin-settings.php:3
+msgid "Google Calendar Settings"
+msgstr ""
+
+#: ../views/admin-settings.php:8
+msgid "Google Auth Code"
+msgstr ""
+
+#: ../views/admin-settings.php:12
+msgid "Get auth code"
+msgstr ""
+
+#: ../views/admin-settings.php:18
+msgid "Save Settings"
+msgstr ""
+
+#: ../views/field-standard-settings.php:4
+msgid "Create content template"
+msgstr ""
+
+#: ../views/form-confirmation-settings.php:5
+msgid "Google Calendar Events require approval"
+msgstr ""
+
+#: ../views/form-confirmation-settings.php:13
+msgid "Google Calendar Check Free/Busy"
+msgstr ""
+
+#: ../views/form-properties-settings.php:8
+msgid "&mdash; Select Calendar &mdash;"
+msgstr ""

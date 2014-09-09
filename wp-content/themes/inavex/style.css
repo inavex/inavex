@@ -1,0 +1,639 @@
+/*
+	Theme Name: Inavex Theme
+	Description: Тема созданная специально для сайта Inavex.ru на основе бесплатного шаблона
+	Version: 1.0.1
+	Author: Pavel Oknemi
+	Author URI: http://isness.com.ua
+	Template: decente
+*/
+
+body {
+    font-family: "PT Sans", sans-serif;
+    font-size: 15px;
+    line-height: 1.6em;
+}
+
+select {
+    padding: 4px 8px !important;
+    height: 35px;
+}
+
+/* modal */
+
+#numberDisplay #playpause {
+    display: none;
+}
+
+.before-head .logo {
+    width: 380px;
+    line-height: 1.2em;
+    margin-top: -15px;
+    margin-bottom: -10px;
+    font-size: 30px;
+}
+.before-head p {
+    margin-bottom: 0;
+}
+.before-head #wpcr_respond_1 {
+    display: none;
+}
+
+.before-head .logo:hover {
+    text-decoration: none;
+}
+.before-head .buttons {
+    margin-top: 14px;
+}
+
+@media (max-width: 1024px) {
+    body {
+        min-width: 800px;
+    }
+
+    .before-head {
+        text-align: center;
+    }
+    .before-head .logo {
+        float: none !important;
+        margin: 0 auto 1em;
+    }
+    .before-head .buttons {
+        margin: 2em 0 0;
+        float: none !important;
+        text-align: center;
+    }
+    #header {
+        margin-top: 50px !important;
+        background: url('images/main-inavex.jpg') -420px 0 !important;
+    }
+    #main-top-wrap {
+        margin: 0 -20px !important;
+    }
+    #main-top-wrap li {
+        display: block;
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+
+    #author-wrap {
+        margin: -10px -20px 20px !important;
+    }
+
+    #main-gallery {
+        margin: 0 -20px 0 !important;
+    }
+
+    #main-partners {
+        width: 310px !important;
+    }
+    #main-partners img {
+        margin-bottom: 10px;
+    }
+    .primeri {
+        width: 370px !important;
+        height: 410px !important;
+    }
+
+    #main-reviews {
+        margin: 0 -20px 0 !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .before-head .logo {
+        width: 380px;
+        line-height: 1.2em;
+        margin-top: -15px;
+        margin-bottom: -10px;
+        font-size: 30px;
+    }
+    .before-head .logo:hover {
+        text-decoration: none;
+    }
+    .before-head .buttons {
+        margin-top: 14px;
+    }
+
+    #header {
+        background: url('images/main-inavex.jpg') -450px 0 !important;
+    }
+
+    .primeri {
+        width: 520px;
+    }
+
+    #main-partners {
+        width: 420px;
+    }
+
+    .our-specialists {
+        margin-left: -20px;
+    }
+
+}
+
+@media (min-width: 1260px) {
+    #outer {
+        width: 1260px;
+    }
+    .boxed .wrap {
+        width: 1260px;
+    }
+    .span12, .container {
+        width: 1180px;
+    }
+    .span8 {
+        width: 840px;
+    }
+    .span8-1 {
+        width: 700px;
+    }
+
+    .before-head .logo {
+        width: 670px;
+        line-height: 1.2em;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 28px;
+    }
+    .before-head .buttons {
+        margin-top: 6px;
+    }
+
+    #header {
+        background: url('images/main-inavex.jpg') -250px 0 !important;
+    }
+
+    #main-partners {
+        width: 600px;
+    }
+
+}
+
+#outer {
+    margin-top: 2.6em;
+    margin-bottom: 1em;
+}
+
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+#header {
+    background: url('images/main-inavex.jpg') -450px 0;
+    height: 48px;
+}
+
+.before-head {
+    margin-top: 2em;
+}
+.before-head .logo {
+    float: left;
+    font-size: 28px;
+    color: #000;
+}
+
+
+/* Кнопки в шапке
+   ========================================================================== */
+
+.before-head .buttons {
+    float: right;
+}
+
+.before-head .buttons ul {
+    margin: 0;
+    list-style: none;
+}
+
+.before-head .buttons li {
+    display: inline-block;
+    *display: inline;
+}
+
+.before-head .buttons a {
+    background: #fefefe; /* Old browsers */
+    background: -moz-linear-gradient(top,  #fefefe 0%, #e7e7e7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(100%,#e7e7e7)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #fefefe 0%,#e7e7e7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #fefefe 0%,#e7e7e7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #fefefe 0%,#e7e7e7 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #fefefe 0%,#e7e7e7 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#e7e7e7',GradientType=0 ); /* IE6-9 */
+    border-radius: 5px;
+    padding: 8px 13px;
+    margin: 0 5px;
+    color: #000;
+    border: 1px solid #bababa;
+}
+.before-head .buttons a:hover {
+    text-decoration: none;
+    background: #fefefe; /* Old browsers */
+    background: -moz-linear-gradient(top,  #fefefe 0%, #d8d8d8 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(100%,#d8d8d8)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #fefefe 0%,#d8d8d8 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #fefefe 0%,#d8d8d8 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #fefefe 0%,#d8d8d8 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #fefefe 0%,#d8d8d8 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#d8d8d8',GradientType=0 ); /* IE6-9 */
+}
+
+
+/* Главное меню
+   ========================================================================== */
+
+#menu-wrap {
+    position: static;
+}
+
+.sf-menu {
+    margin: 0 -40px !important;
+    padding: 0 40px !important;
+    background: #595959;
+    text-align: left;
+}
+.sf-menu > li {
+    display: inline-block;
+    *display: inline;
+    float: none;
+}
+.sf-menu .menu-item a {
+    font-size: 15px !important;
+}
+.sf-menu .sfHover a {
+    padding: 3px 15px;
+    margin: -3px 10px 0 -15px;
+    background: #414141;
+}
+.sfHover ul {
+    text-align: left !important;
+    background: #414141 !important;
+}
+
+.frameshift-menu-main {
+    background: #595959;
+}
+.frameshift-menu .sf-menu li li a, .frameshift-menu .sf-menu li li a:visited {
+    padding: 6px 15px;
+    line-height: 1.3em;
+}
+
+
+/* Дополнительное меню
+   ========================================================================== */
+
+#header-menu {
+    background: #4E4E4E;
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+#header-menu ul {
+    list-style: none;
+    margin: 1em 2em;
+}
+
+#header-menu li {
+    display: block;
+}
+
+#header-menu a {
+    display: block;
+    padding: 1.1em .2em;
+    border-bottom: 1px dotted #706F6F;
+    color: #fff;
+    line-height: 21px;
+    font-size: 15px;
+    font-family: 'PT Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+#header-menu li ul {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+
+    #header-menu {
+        width: 100%;
+        height: 50px;
+        margin-top: -50px;
+    }
+    #header-menu ul {
+        margin-top: .8em;
+    }
+    #header-menu li {
+        display: inline-block;
+        *display: inline;
+    }
+    #header-menu a {
+        padding: 0 .8em;
+        border-bottom: 0;
+    }
+
+}
+
+
+.ngg-galleryoverview {
+    margin-bottom: 20px;
+}
+
+.clearafter:after {
+    content:'';
+    display:block;
+    clear: both;
+}
+
+.post-meta {
+    display: none;
+}
+
+.address-footer {
+    margin-top: -6px;
+}
+
+#main-top-wrap {
+    margin: 0 -40px;
+    padding-bottom: 30px;
+}
+#main-top-wrap .span3 {
+    width: 16.5%;
+}
+#main-top-wrap .title {
+    font-weight: bold;
+}
+
+#main-top ul {
+    margin: 0;
+    overflow: hidden;
+}
+
+#main-top ul li {
+    float: left;
+    width: 16.5%;
+    list-style: none;
+    padding-bottom: 20px;
+    zoom: 1;
+}
+
+#main-top ul li:first-child {
+    margin-left: 0px;
+    clear: both;
+}
+
+.widget-spaces-wrap h3 {
+    font-weight: bold;
+}
+
+#main-top .textwidget {
+    font-size: 14px;
+    line-height: 21px;
+    text-align: left;
+}
+#main-top .textwidget a {
+    color: #333333;
+}
+
+#main-top .title,
+.widget-spaces-wrap h3 {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: left;
+}
+#main-top .spaces-text {
+    font-size: 14px;
+    line-height: 21px;
+    text-align: left;
+}
+
+#author-wrap {
+    padding: 30px 0 10px;
+    background: #fff;
+    border: 1px dashed #ccc;
+    border-left: 0;
+    border-right: 0;
+    margin: -10px -40px 20px;
+}
+
+#author-wrap h1 {
+    font-size: 20px !important;
+}
+
+#cboxCurrent {
+    display: none !important;
+}
+
+#main-gallery {
+    padding: 10px 0 10px;
+    margin: 0 -40px 0;
+}
+#main-gallery .container {
+    margin: 0 -5px;
+    width: 1260px;
+}
+#main-gallery h3 {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 18px;
+    text-align: left;
+    font-weight: bold;
+}
+#main-gallery .ngg-galleryoverview {
+    margin-left: -3px;
+}
+.primeri {
+    overflow: hidden;
+    height: 240px;
+}
+.primeri .ngg-galleryoverview {
+    padding: 0;
+}
+
+#main-partners h3 {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 24px;
+    text-align: left;
+    font-weight: bold;
+}
+#main-partners img {
+    height: 60px;
+}
+
+#main-reviews {
+    padding: 10px 0 18px;
+    margin: 0 -40px 0;
+}
+#main-reviews h3 {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 18px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.social-icons {
+    float: right;
+    width: 220px;
+    margin-right: 20px;
+}
+.social-icons a {
+    color: #ffffff;
+}
+
+.b-testimonials {
+    margin: 0 -20px;
+}
+
+.b-testimonial {
+    font-size: 13px;
+    line-height: 1.5em;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: top;
+    width: 200px;
+    margin: 0 20px 20px;
+}
+.b-testimonial__content {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+}
+.b-testimonial__name {
+    margin-right: 20px;
+    font-weight: bold;
+    text-align: right;
+}
+.b-testimonial__arrow {
+    position: absolute;
+    bottom: -15px;
+    right: 70px;
+    display: block;
+    width: 32px;
+    height: 20px;
+    background: url(images/testmionial.png) 0 0;
+}
+.notheme {
+    margin-bottom: 0;
+}
+.notheme .wpcf7-form {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.notheme .wpcf7-text {
+    width: 200px;
+}
+.notheme .wpcf7-submit {
+    height: 35px;
+    line-height: 22px;
+}
+
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required {
+    margin-right: 5px;
+}
+
+#author-wrap .size-thumbnail {
+    max-height: 90px;
+    border: 4px solid #ccc;
+    margin-top: 4px;
+    margin-right: 20px;
+}
+
+.YMaps-b-balloon-frame {
+    margin-bottom: 0 !important;
+}
+
+.YMaps-b-balloon-frame tr,
+.YMaps-b-balloon-frame td {
+    border: none !important;
+}
+
+.prim-link {
+    margin-right: 30px;
+    float: left;
+    display: block;
+}
+
+.prim-link img {
+    display: block;
+    width: 120px;
+    border: 5px solid #F8F8F8;
+}
+
+@media (max-width: 1024px) {
+    .prim-link img {
+        display: block;
+        width: 80px;
+        border: 5px solid #F8F8F8;
+    }
+}
+
+.prim-link span {
+    width: 140px;
+    font-size: 12px;
+    line-height: 15px;
+    display: block;
+}
+
+.social-container {
+    background: #fafafa;
+    padding: 6px 10px 2px;
+}
+
+
+/* footer banner */
+
+.footer-banner {
+    width: 520px;
+    padding: 1em 2em 0;
+    margin: 0 auto;
+    border: 2px dotted #ccc;
+    text-align: center;
+    background: #fafafa;
+}
+
+.footer-banner h1 {
+    font-weight: bold;
+    font-size: 1.6em;
+}
+
+.footer-banner b {
+
+}
+
+.footer-menu {
+    margin: -60px 0 40px;
+    background: #525252;
+    padding: 14px 0;
+    width: 100%;
+}
+
+.footer-menu ul {
+    text-align: center;
+    margin: 0 0 0 40px;
+}
+
+.footer-menu li {
+    display: inline-block;
+    margin-right: 20px;
+    list-style-type: none;
+}
+
+.footer-menu li a {
+    color: #fff;
+    font-family: 'PT Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+
+.dateEntry-control {
+    display: none !important;
+}
