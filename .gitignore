@@ -1,1 +1,6 @@
 .idea
+cgi-bin/
+logs/
+test/
+*.log
+README*

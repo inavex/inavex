@@ -108,7 +108,7 @@ $parent_id = get_the_ID(); ?>
                     </div>
 
                     <div style="float: left; width: 560px;">
-                        <h2>Укажите данные для расчета износа кузова, пластика и прочих деталей</h2>
+                        <h2>Укажите данные для расчета износа комплектующих изделий (деталей, узлов и агрегатов) транспортного средства</h2>
 
                         <table class="b-table-calc">
                             <tr>
@@ -138,29 +138,29 @@ $parent_id = get_the_ID(); ?>
                                             <input name="probeg-ts" id="probeg-ts" type="text" value="" class="medium span2-2" tabindex="1">
                                         </div>
                                 </td>
-                                <td>
+                                <td><!--
                                         <label for="gsk">Гарантия от сквозной <br>коррозии (лет)<span class="required">*</span></label>
                                         <div class="">
                                             <input name="gsk" id="gsk" type="text" value="" class="medium span2-2" tabindex="1">
-                                        </div>
+                                        </div> -->
                                 </td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <td colspan="3">
+                                <td colspan="3"><!--
                                     <label for="vozrast-ts">Возраст ТС по комментариям к ПП №361 (в полных годах, лет)</label>
                                     <div class="">
                                         <input name="vozrast-ts" id="vozrast-ts" type="text" value="" class="medium span3" disabled  tabindex="1">
                                         <input type="radio" name="type-vozrast" value="1" class="vozrast-radio" checked>
-                                    </div>
+                                    </div>-->
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="3">
-                                    <label for="vozrast-ts2">Возраст ТС по МР для СЭ, ФБУ РФЦСЭ при Минюсте России, 2013г. (в годах с точностью до одного знака после запятой)</label>
+                                    <label for="vozrast-ts2">Возраст комплектующего изделия (в годах с точностью до одного десятичного знака)</label>
                                     <div class="">
                                         <input name="vozrast-ts2" id="vozrast-ts2" type="text" value="" class="medium span3" disabled  tabindex="1">
-                                        <input type="radio" name="type-vozrast" value="2" class="vozrast-radio">
+                                        <!--<input type="radio" name="type-vozrast" value="2" class="vozrast-radio">-->
                                     </div>
                                 </td>
                             </tr>
@@ -292,14 +292,15 @@ $parent_id = get_the_ID(); ?>
                                 $('.b-calc-result__error').fadeIn(200);
                                 $('.b-calc-result__error-description').text('Вы не указали пробег ТС!');
 
-                            } else if (!$("#calcForm input[name='gsk']").val()) {
-
-                                $('.b-calc-result').hide();
-                                $('.b-calc-result__title').fadeIn(200);
-                                $('.b-calc-result__error').fadeIn(200);
-                                $('.b-calc-result__error-description').text('Вы не указали гарантию от сквозной коррозии!');
-
                             }
+                            //else if (!$("#calcForm input[name='gsk']").val()) {
+                            //
+                            //    $('.b-calc-result').hide();
+                            //    $('.b-calc-result__title').fadeIn(200);
+                            //    $('.b-calc-result__error').fadeIn(200);
+                            //    $('.b-calc-result__error-description').text('Вы не указали гарантию от сквозной коррозии!');
+                            //
+                            //}
 
                             // проверка шин
                             else if (($("#calcForm input[name='fact-hp']").val() || $("#calcForm input[name='fact-shina-date']").val() || $("#calcForm input[name='new-height-shina']").val()) && (!$("#calcForm input[name='fact-hp']").val() || !$("#calcForm input[name='fact-shina-date']").val() || !$("#calcForm input[name='new-height-shina']").val())) {
@@ -375,7 +376,7 @@ $parent_id = get_the_ID(); ?>
                         });
 
                         $("#calcForm input[type='text'], #calcForm select").change(function(){
-                            if ($("#calcForm select[name='deltaId']").val() && $("#calcForm input[name='date-ts']").val() && $("#calcForm input[name='date-dtp']").val() && $("#calcForm input[name='gsk']").val() ) {
+                            if ($("#calcForm select[name='deltaId']").val() && $("#calcForm input[name='date-ts']").val() && $("#calcForm input[name='date-dtp']").val() /*&& $("#calcForm input[name='gsk']").val()*/ ) {
                                 $("#calcForm input[type='submit']").removeClass('disabled');
                             } else {
                                 $("#calcForm input[type='submit']").addClass('disabled');
@@ -403,16 +404,16 @@ $parent_id = get_the_ID(); ?>
                 </div>
 
                 <table class="b-calc-result" style="display: none">
-                    <tr id="depreciationBody">
+                    <!--<tr id="depreciationBody">
                         <td>Износ несъемных элементов кузова транспортного средства принимается равным</td>
                         <td class="value"></td>
                     </tr>
                     <tr id="depreciationPlastic">
                         <td>Износ пластиковых элементов транспортного средства принимается равным</td>
                         <td class="value"></td>
-                    </tr>
+                    </tr>  -->
                     <tr id="depreciationOfOtherParts">
-                        <td>Износ прочих элементов транспортного средства принимается равным</td>
+                        <td>Износ комплектующих изделий (деталей, узлов и агрегатов) транспортного средства</td>
                         <td class="value"></td>
                     </tr>
                     <tr id="depreciationTires" style="display: none";>

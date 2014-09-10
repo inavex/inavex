@@ -9,15 +9,16 @@ include '../calc2.php';
 // New Word Document
 $PHPWord = new PHPWord();
 
-if ($_POST['type-vozrast'] == "1") {
-    $document = $PHPWord->loadTemplate('calcTemplate.docx');
-    $years = years($_POST['date-ts'], $_POST['date-dtp']);
-    $yearsAccum = years($_POST['fact-acum'], $_POST['date-dtp']);
-} elseif ($_POST['type-vozrast'] == "2") {
-    $document = $PHPWord->loadTemplate('calcTemplateMRSE.docx');
-    $years = $result['yearsByMR'];
-    $yearsAccum = yearsByMR($_POST['fact-acum'], $_POST['date-dtp'], $_POST['type-vozrast']);
-}
+//if ($_POST['type-vozrast'] == "1") {
+//    $document = $PHPWord->loadTemplate('calcTemplate.docx');
+//    $years = years($_POST['date-ts'], $_POST['date-dtp']);
+//    $yearsAccum = years($_POST['fact-acum'], $_POST['date-dtp']);
+//} elseif ($_POST['type-vozrast'] == "2") {
+//$document = $PHPWord->loadTemplate('calcTemplateMRSE.docx');
+$document = $PHPWord->loadTemplate('calcTemplate30072014.docx');
+$years = $result['yearsByMR'];
+$yearsAccum = yearsByMR($_POST['fact-acum'], $_POST['date-dtp'], $_POST['type-vozrast']);
+//}
 
 $battery = ($result['depreciationBattery'] == 'noDataForBattery') ? '' : $result['depreciationBattery'].'%';
 $tires = ($result['depreciationTires'] == 'noDataForTires') ? '' : $result['depreciationTires'].'%';
