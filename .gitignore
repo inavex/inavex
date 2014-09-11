@@ -4,3 +4,4 @@ logs/
 test/
 *.log
 README*
+wp-content/themes/inavex/PDF_EXTENDED_TEMPLATES/output/
