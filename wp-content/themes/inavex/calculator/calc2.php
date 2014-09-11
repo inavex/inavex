@@ -258,18 +258,19 @@ function yearsByMR($date1, $date2) {
  * @return float
  */
 function depreciationOfOtherParts($delta, $idOfDelta, $mileage, $ageOfVehicle) {
-    $result = 100 * ( 1 - pow(2.72, -( $delta[$idOfDelta]['0']*$ageOfVehicle + $delta[$idOfDelta]['1']*($mileage / 1000) )) );
+    //$result = 100 * ( 1 - pow(2.718282, -( $delta[$idOfDelta]['0']*$ageOfVehicle + $delta[$idOfDelta]['1']*($mileage / 1000) )) );
+    $result = 100 * ( 1 - exp(-($delta[$idOfDelta]['0']*$ageOfVehicle + $delta[$idOfDelta]['1']*($mileage / 1000))));
     $result = round($result, 2);
     return ($result > 80) ? '80' : $result;
 }
 
 
-function getTypeOfYears($date1, $date2, $typevozrast) {
-    if ($typevozrast == "1") {
-        return years($date1, $date2);
-    } else if ($typevozrast == "2") {
-        return yearsByMR($date1, $date2);
-    }
+function getTypeOfYears($date1, $date2/*, $typevozrast*/) {
+    //if ($typevozrast == "1") {
+    //    return years($date1, $date2);
+    //} else if ($typevozrast == "2") {
+    return yearsByMR($date1, $date2);
+    //}
 }
 
 $result = array(
@@ -277,7 +278,7 @@ $result = array(
     'depreciationTires' => calcDepreciationTires($_POST['new-height-shina'], $_POST['fact-hp'], $_POST['minHeight'], $_POST['fact-shina-date'], $_POST['date-dtp']),
     'depreciationBattery' => calcDepreciationBattery($_POST['fact-acum'], getTypeOfYears($_POST['date-ts'], $_POST['date-dtp'], $_POST['type-vozrast']), $_POST['date-dtp'], $_POST['probeg-ts']),
     'depreciationPlastic' => calcDepreciationPlastic(getTypeOfYears($_POST['date-ts'], $_POST['date-dtp'], $_POST['type-vozrast'])),
-    'depreciationOfOtherParts' => depreciationOfOtherParts($delta, $_POST['deltaId'], $_POST['probeg-ts'], getTypeOfYears($_POST['date-ts'], $_POST['date-dtp'], $_POST['type-vozrast'])),
+    'depreciationOfOtherParts' => depreciationOfOtherParts($delta, $_POST['deltaId'], $_POST['probeg-ts'], getTypeOfYears($_POST['date-ts'], $_POST['date-dtp']/*, $_POST['type-vozrast']*/)),
     'ageOfVehicle' => years($_POST['date-ts'], $_POST['date-dtp']),
     'yearsByMR' => yearsByMR($_POST['date-ts'], $_POST['date-dtp'], $_POST['type-vozrast']),
     'annualMileage' => round(averageMileage($_POST['probeg-ts'], getTypeOfYears($_POST['date-ts'], $_POST['date-dtp'], $_POST['type-vozrast'])), 0),
