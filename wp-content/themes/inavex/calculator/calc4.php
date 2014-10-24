@@ -213,21 +213,21 @@ function yearsByMR($date1, $date2) {
     if (!isset($date1, $date2)) {
         return false;
     }
+    $date1 = explode('.', $date1);
+    $date1 = $date1[2].'-'.$date1[1].'-'.$date1[0];
 
-    $date1 = new DateTime($date1);
-    $date2 = new DateTime($date2);
+    $date2 = explode('.', $date2);
+    $date2 = $date2[2].'-'.$date2[1].'-'.$date2[0];
 
-    $ageOfVehicleMonth = $date1->diff($date2)->m;
-    $ageOfVehicleYears = $date1->diff($date2)->y;
+    $diff = abs(strtotime($date2) - strtotime($date1));
 
-    if ($ageOfVehicleMonth == 0 && $ageOfVehicleYears == 1) {
-        return 1;
-    } else
-    if ($ageOfVehicleMonth !== 0 && $ageOfVehicleYears < 1) {
-        return round($ageOfVehicleMonth*0.08);
-    } else  if ($ageOfVehicleYears >= 1) {
-        return round($ageOfVehicleYears+$ageOfVehicleMonth*0.08);
-    }
+    $ageOfVehicleYears = floor($diff / (365*60*60*24));
+    $ageOfVehicleMonth = floor(($diff - $years * 365*60*60*24) / (30*60*60*24));
+    #$days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24) / (60*60*24));
+
+    return round($ageOfVehicleMonth*0.08);
+
+
 }
 
 
