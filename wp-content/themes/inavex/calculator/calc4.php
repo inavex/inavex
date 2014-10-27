@@ -91,7 +91,7 @@ function averageMileage($mileage, $years) {
  */
 function calcDepreciationBody($tKuz, $tSk) {
     $result = round(100 * (  1 - pow(2.72, -(4 * $tKuz)/(20+4 * $tSk)) ), 2);
-    return ($result > 80) ? '80' : $result;
+    return ($result > 50) ? '50' : $result;
 }
 
 
@@ -132,7 +132,7 @@ function calcDepreciationTires($Nn, $Nf, $Ndop, $dateOfShina, $dateNow) {
 
     $result = round($result, 2);
 
-    return ($result > 80) ? '80' : $result;
+    return ($result > 50) ? '50' : $result;
 }
 
 
@@ -165,8 +165,8 @@ function calcDepreciationBattery($Tak, $years, $dateNow, $mileage){
     $result = ($ageOfTheBattery/$normativeAge) * 100;
 
     // Не может быть больше 80%
-    if ($result > 80) {
-        $result = 80;
+    if ($result > 50) {
+        $result = 50;
     }
 
     return round($result,2);
@@ -198,7 +198,7 @@ function normativeBattery($mileage, $years) {
 function calcDepreciationPlastic($ageOfVehicle) {
     $result = 100 * ( 1 - pow(2.72, -(0.1 * $ageOfVehicle)));
     $result = round($result,2);
-    return ($result > 80) ? '80' : $result;
+    return ($result > 50) ? '50' : $result;
 }
 
 
@@ -243,16 +243,16 @@ function yearsByMR($date1, $date2) {
 function depreciationOfOtherParts($delta, $idOfDelta, $mileage, $ageOfVehicle) {
     $result = 100 * ( 1 - pow(2.72, -( $delta[$idOfDelta]['0']*$ageOfVehicle + $delta[$idOfDelta]['1']*($mileage / 1000) )) );
     $result = round($result, 2);
-    return ($result > 80) ? '80' : $result;
+    return ($result > 50) ? '50' : $result;
 }
 
 
 function getTypeOfYears($date1, $date2, $typevozrast) {
-    if ($typevozrast == "1") {
-        return years($date1, $date2);
-    } else if ($typevozrast == "2") {
-        return yearsByMR($date1, $date2);
-    }
+    //if ($typevozrast == "1") {
+    //    return years($date1, $date2);
+    //} else if ($typevozrast == "2") {
+    return yearsByMR($date1, $date2);
+    //}
 }
 
 $result = array(
