@@ -223,10 +223,9 @@ function yearsByMR($date1, $date2) {
 
     $ageOfVehicleYears = floor($diff / (365*60*60*24));
     $ageOfVehicleMonth = floor(($diff - $years * 365*60*60*24) / (30*60*60*24));
-    #$days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24) / (60*60*24));
+    $ageOfVehicleDays = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24) / (60*60*24));
 
-    return round($ageOfVehicleMonth*0.08);
-
+    return round($ageOfVehicleMonth/12);
 
 }
 
